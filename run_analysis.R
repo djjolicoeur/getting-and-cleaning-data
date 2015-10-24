@@ -78,7 +78,7 @@ molten_data <- melt(all_data, id = id_labels, measure.vars = data_labels)
 data <- dcast(molten_data, Subject + ActivityName ~ variable, mean)
 
 #write final analysis to file
-write.table(data, file = "./tidy_data.csv", sep = ",")
+write.table(data, file = "./tidy_data.csv", sep = ",", row.names = FALSE)
 
 
 
